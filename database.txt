@@ -1,0 +1,372 @@
+===Database muchoworld
+
+== Table structure for table billing_information
+
+|------
+|Column|Type|Null|Default
+|------
+|//**BillingInfoID**//|int|No|
+|UserID|int|No|
+|first_name|varchar(255)|No|
+|last_name|varchar(255)|No|
+|address|varchar(255)|Yes|NULL
+|country|varchar(255)|No|
+|state|varchar(255)|No|
+|payment_method|varchar(30)|No|
+== Dumping data for table billing_information
+
+|39|15|Fouad|Dahouk| |Lebanon|Beirut|Pick Up
+|40|15| | | |Lebanon|Beirut|Pick Up
+|41|15|gh|ggds| |Lebanon|Beirut|Pick Up
+|42|15| | | |Lebanon|Beirut|Pick Up
+|43|15| | | |Lebanon|Beirut|Pick Up
+|44|15|Fouad|Dahouk| |Lebanon|Beirut|Pick Up
+|45|15|Fouad|Dahouk| |Lebanon|Beirut|Pick Up
+== Table structure for table blog
+
+|------
+|Column|Type|Null|Default
+|------
+|//**BlogID**//|int|No|
+|BlogTitle|varchar(30)|No|
+|BlogContent|longtext|No|
+|BlogImage|text|No|
+== Dumping data for table blog
+
+|22|CARING FOR THE SAFETY OF THOSE|A responsible dog owner does this even if it includes sacrifice or unhappiness on occasion. What does this look like? If your dog isn’t comfortable at a bustling cafe (or sidewalk sale, Lowe’s, festival, etc.), leave him at home. His discomfort isn’t worth your guilt for leaving him at home. He’s happier and safer. If your dog doesn’t love company coming over, find a safe space to place her while guests are over. Or meet your friends at a restaurant or their house. If your dog goes to an on-leash park or trail, keep your dog on leash even if you think your dog has the most reliable recall in the universe. Your dog might be the most friendly, outgoing, gregarious girl the world has ever seen, but if you’re going to have small children over or take your dog to an event filled with small children, consider your plan carefully. Do not expect your dog to be perfect around small children even if she’s perfect everywhere else. Even if you feel, as I do, that parents should teach their kids how to behave around dogs, you can’t count on that and put your dog in jeopardy. No matter what you expect of other people, the only person you can control is you. Make good decisions for your dog around children even if it means leaving her at home or skipping the event altogether. Also, this should go without saying but we constantly find piles at parks, playgrounds, and trails: Pick up after your pet!|BLOG5DOG.webp
+|23|Should you shave your cat?|Here are some compelling reasons why the majority of veterinarians advise against shaving your cat: • When you shave a cat, you increase their risk for developing superficial skin infections by removing their natural protection against extreme weather and ultraviolet rays. • You can easily eliminate matted fur by regularly brushing kitty leaving no need for a full shave. • Specially designed brushes can highly reduce the massive shedding some breeds experience during warm weather. • It can be psychologically damaging for a kitty to lose their coat and to endure the trauma of being at the groomer with loud and scary noises.|BLOG2CAT.jpg
+|24|SHOULD I PUT OUT JELLY FOR BIR|By offering many types of foods at their feeders, backyard bird enthusiasts can encourage different bird visitors to stop by. For birds like orioles and tanagers, putting out fruit halves or jelly is popular during spring migration. But is it safe? As temperatures get hotter, jellies can liquify, which can be dangerous or deadly for hummingbirds if it gets caught in their feathers, according to a recent message from the Raptor Education Group,Inc. 1. Don’t put out too much food for birds. They have natural sources of food to access at this time of year! Just give enough to supplement. 2. For frugivores (fruit-eaters), keep it simple: whole fruits are better than jellies. Birds that eat fruit will be inclined to eat fruit—they don’t make jelly for themselves. If you do decide to offer jelly, only use those made without artificial ingredients or sugar substitutes. 3. If offering jellies, volume and presentation are key. The more you give and the wider the space presented (i.e. a dish or holder) equals the more contact a bird might have with the sticky substance.|BLOG4BIRDS.jpg
+== Table structure for table cart
+
+|------
+|Column|Type|Null|Default
+|------
+|//**UserID**//|int|No|
+|//**ProductID**//|int|No|
+|quantity|int|Yes|NULL
+|totalPrice|double|Yes|NULL
+== Dumping data for table cart
+
+== Table structure for table contactus
+
+|------
+|Column|Type|Null|Default
+|------
+|//**ConctatID**//|int|No|
+|FullName|varchar(30)|No|
+|ContactEmail|varchar(50)|No|
+|Subject|varchar(35)|No|
+|Message|varchar(150)|No|
+|status|varchar(6)|No|Unread
+== Dumping data for table contactus
+
+|3|Fouad Dahouk|fouaddahouk99@gmail.com|dhsdgsogduog|mlxz nijaSCBu8ef8uwegyewrf7ys8|Read
+|4|guguigaiuasi|ifusgu@hdgdhgd.com|daassaa|ddkusduisssssudusdusdudgsuguwd|Read
+|5|Fouad Dahouk|fouaddahouk99@gmail.com|subject|this is a testing mail|Read
+|6|rita |ritahabla@gmail.com|ana ktir bheb el golden retriever|lesh ma 3ndkon 3al site golden bedkon atle?
+|Read
+|7|djihduiduig|hahahaha@gmail.com|skgsduigsuigdui|siudgsdhagoidgoudwg|Read
+== Table structure for table orders
+
+|------
+|Column|Type|Null|Default
+|------
+|//**OrderID**//|int|No|
+|UserID|int|No|
+|BillingInfoID|int|No|
+|order_date|datetime|No|
+== Dumping data for table orders
+
+|28|15|39|2023-08-19 13:39:23
+|29|15|40|2023-08-22 13:54:18
+|30|15|41|2023-08-23 11:14:47
+|31|15|42|2023-09-08 21:18:14
+|32|15|43|2023-09-29 22:46:35
+|33|15|44|2024-01-02 20:16:36
+|34|15|45|2024-02-14 21:43:57
+== Table structure for table order_items
+
+|------
+|Column|Type|Null|Default
+|------
+|//**OrderItemID**//|int|No|
+|OrderID|int|No|
+|ProductID|int|No|
+|quantity|int|No|
+|totalPrice|double|No|
+== Dumping data for table order_items
+
+|32|28|13|1|110
+|33|28|24|5|110
+|34|29|14|4|2930
+|35|29|32|4|2930
+|36|29|41|2|2930
+|37|30|13|5|50
+|38|31|14|1|720
+|39|31|32|1|720
+|40|32|25|5|50
+|41|33|32|1|700
+|42|34|32|5|3500
+== Table structure for table packages
+
+|------
+|Column|Type|Null|Default
+|------
+|//**packageID**//|int|No|
+|packageName|varchar(255)|No|
+|display|tinyint(1)|No|
+== Dumping data for table packages
+
+|27| |0
+|28|July Package|1
+|29|Mars Package|1
+|30|May Package|1
+|31|Juin Package|0
+|32|testiing|0
+== Table structure for table package_services
+
+|------
+|Column|Type|Null|Default
+|------
+|//**packageID**//|int|No|
+|//**serviceID**//|int|No|
+|discount|float|Yes|NULL
+|finalPrice|float|Yes|NULL
+== Dumping data for table package_services
+
+|8|1|20|72
+|8|2|20|72
+|8|4|20|72
+|9|1|50|75
+|9|2|50|75
+|9|3|50|75
+|9|4|50|75
+|9|5|50|75
+|10|1|60|50
+|10|2|60|50
+|10|4|60|50
+|10|5|60|50
+|11|1|0|150
+|11|2|0|150
+|11|3|0|150
+|11|4|0|150
+|11|5|0|150
+|16|1|10|45
+|16|2|10|45
+|17|1|5|47.5
+|17|2|5|47.5
+|18|1|30|0
+|18|2|30|0
+|18|3|30|0
+|18|15|30|0
+|19|1|30|87.5
+|19|2|30|87.5
+|19|4|30|87.5
+|19|5|30|87.5
+|20|1|50|111.5
+|20|2|50|111.5
+|20|3|50|111.5
+|20|4|50|111.5
+|20|5|50|111.5
+|20|15|50|111.5
+|21|2|4|91.2
+|21|3|4|91.2
+|21|4|4|91.2
+|22|1|50|94
+|22|2|50|94
+|22|3|50|94
+|22|4|50|94
+|22|15|50|94
+|23|1|45|64.9
+|23|3|45|64.9
+|23|15|45|64.9
+|24|1|54|74.98
+|24|2|54|74.98
+|24|4|54|74.98
+|24|15|54|74.98
+|25|1|87|28.99
+|25|2|87|28.99
+|25|3|87|28.99
+|25|4|87|28.99
+|25|5|87|28.99
+|25|15|87|28.99
+|26|1|4|86.4
+|26|2|4|86.4
+|26|4|4|86.4
+|28|1|10|81
+|28|2|10|81
+|28|4|10|81
+|29|3|15|85
+|29|4|15|85
+|29|5|15|85
+|30|3|20|80
+|30|4|20|80
+|30|5|20|80
+|31|1|5|71.25
+|31|2|5|71.25
+|31|3|5|71.25
+|32|1|20|60
+|32|2|20|60
+|32|3|20|60
+== Table structure for table pets
+
+|------
+|Column|Type|Null|Default
+|------
+|//**PetID**//|int|No|
+|PetName|varchar(10)|No|
+|Age|int|No|
+|Sex|int|No|
+|Castrated|int|No|
+|petImage|varchar(255)|No|
+|MoreInfo|varchar(150)|Yes|NULL
+|UserID|int|No|
+|status|varchar(20)|No|available
+|petType|varchar(10)|No|
+== Dumping data for table pets
+
+|10|Rex|2|1|1|siberianhusky.png|Rex is a very strong but friendly Siberian husky |16|unavailable|dog
+|11|Oliver|3|1|1|Pomeranian.webp|Oliver is the best friend a human can have a very caring Promeranian dog, he is also very friendly with kids.|16|unavailable|dog
+|12|lala|1|0|0|Bichon-Frise.jpg|Lala is a Bichon-Frise dog, she doesn't like the wet food and is allergic to fish |16|Unavailable|dog
+|13|Micho|5|1|0|dalmatien.jpg|Micho is a dalmetian dog, the best companion of all times but he doesn't like noises considering he is old |16|unavailable|dog
+|14|Lucy|1|0|1|BurmeseCat.jpeg|Lucy is a lazy Burmese cat, she really likes to just lay around and sleep everywhere, so if you are someone looking for a friend to just chill with, l|16|Unavailable|cat
+|15|Milo|5|1|1|PersianCat.jpeg|Milo is a Persian frowny cat, he is old so he requires so much attention and care|16|unavailable|cat
+|16|Simba|1|1|1|BirmanCat.jpeg|Simba is the best Birman cat you can have, he is the friendliest ever and enjoy kids company|16|unavailable|cat
+|17|Hatshiko|6|1|0|ScottishFoldCat.jpeg|if you are looking for a cute scottich cat , Hatshiko is the best choice|16|available|cat
+|18|Loffi|2|1|0|SyrianHamster.jpeg|Loffi is the cutest Syrian hamster, but he is a very messy one|16|available|hamster
+|19|Oli|1|1|0|TurkishHamster.jpg|Oli is my small Turkish friend, and he needs a warm family to take care of him|16|unavailable|hamster
+|20|Popo|1|0|0|RomanianHamster.webp|Popo is a very calm Romanian Hamster, she is very classy and loves the high life style |16|available|hamster
+|21|Shifo|2|1|0|ChineseHamster.jpeg|Shifo is the wisest and smartest hamster you can ever meet maybe because he is Chinese  |16|available|hamster
+|22|Melody|1|0|0|YellowCanaryBird.jpeg|As her name say Melody is a Yellow Canary with one of the best voices you can ever hear, she is the best morning alarm ever|16|unavailable|bird
+|23|Loumi|2|1|0|MacawBird.jpeg|Loumi is a Macaw bird he doesn't like to eat any bread crumbs|16|available|bird
+|24|Mocci|1|1|0|AfricanGreyParrotBird.jpeg|Mocci is an African grey Parrot, the best friend you can have, he is also trained to speak most words you can think of|16|available|bird
+|25|Fino|3|0|0|FinchBird.jpg|Fino is a Finch Bird, one of a kind really cute and have a great voice|16|unavailable|bird
+== Table structure for table products
+
+|------
+|Column|Type|Null|Default
+|------
+|//**ProductID**//|int|No|
+|ProductType|varchar(30)|No|
+|ProductName|varchar(30)|No|
+|ProductDesc|varchar(255)|No|
+|ProductPrice|double|No|
+|ProductImage|varchar(30)|No|
+|petType|varchar(30)|No|
+== Dumping data for table products
+
+|12|Toys|Cat Knitting Roll|Cat knitting roll yarn ball cat toy with rattle|5|CatknittingRoll.jpg|cat
+|13|Toys|Dog Bone |The bone dog toy gentle teeth|10|DogBone.jpg|dog
+|14|Toys|Dog Ball|Wobble wag interactive fun dog toy ball|20|DogBall.jpg|dog
+|16|Toys|Dog Squeaky Ball |Tennis balls for dogs squeaky balls 5 pack|25|DogSqueakyBall.jpg|dog
+|17|Toys|Dog Frisbee|Nerf dog frisbee Flyer toy lightweight and durable|5|DogFrisbee.jpg|dog
+|18|Toys|Dog Rope |Dog rope toy for aggressive chewers|5|DogRope.jpg|dog
+|19|Toys|Dog Pillow|Dog plush hugging pillow toy|15|DogPillow.jpg|dog
+|20|Toys|Cat Laser Toy|Rechargeable motion activated laser cat toy (interactive) |30|Cat Lazer.jpg|cat
+|21|Toys|Cat Laser Pointer|Lazer pointer for cats laser toy for indoor|15|CatLazerPointer.jpeg|cat
+|22|Toys|Cat Fish Pole |Cat fishing pole. Pole teaser indoor.|20|CatFishPole.jpg|cat
+|23|Toys|Cat Mouse|Cat mouse toy, smart USB rechargeable electric|10|CatMouse.jpg|cat
+|24|Accessories|Hamster Water Dispenser |Hamster hanging water bottle auto dispenser 80mL|20|HamsterWaterDispenser.jpg|hamster
+|25|Accessories|Hamster Bridge With Hammock|Small bridge with hammock, rope ladder for hamster|10|HamsterBridgeWithHammock.jpg|hamster
+|26|Toys|Hamster Cruiser|Cruiser pet powered exercise car for hamsters|20|HamsterCruiser.jpg|hamster
+|27|Toys|Hamster Tunnel|Hamster tunnel tube toy, tunnel exercise and playground|20|HamsterTunnel.jpg|hamster
+|28|Toys|Hamster Seesaw|Hamster seesaw wooden hanging swing set|16|HamsterSeesaw.jpg|hamster
+|29|Toys|Bird Hoop|Bird Basketball hoop toy|15|BirdHoop.jpg|birds
+|30|Toys|Bird Ring Collector|Bird training ring toy wooden|10|BirdRingCollector.jpg|birds
+|31|Toys|Master Slide |Hamster slide toy and hideout hut|10|HamsterSlide.jpg|hamster
+|32|Accessories|Jireou|Jireou 4L automatic cat steel bowl |700|Jireou.jpg|cat
+|33|Accessories|Tent|Dog tent with cushions and small board|60|Tent.jpg|dog
+|34|Accessories|Veto Comis|VetoComis Shampoo PH neutral 300mL for puppies, almond based |20|VetoCanis.jpg|dog
+|35|Accessories|Asobu|Adobe bouteille bordeaux pour chien 0.975L|25|Asobu.jpg|dog
+|36|Accessories|Caisse|Caisse de transpot de chat|100|Caisse.jpg|cat
+|37|Toys|Bird Swing|Bird hammock swing toy|10|birdhammock.webp|birds
+|41|Accessories|Brosse|Brosse pour chat autonettoyante enlève jusqu'à 95% des poils morts|25|Brosse.jpg|cat
+|42|Accessories|Burt's Bees|Burt's Bees cat shampoo with shea butter and honey|10|BurtsBees.jpg|cat
+|43|Accessories|Hamster Home|Cristal hamster home with hamster wheel, water bottle and hideout|35|HamsterHome.jpg|hamster
+|44|Food|Pedigree Croquettes|Croquettes au poulet pour chien junior. Sac de 3kg.|30|Pedigreecroquettes.jpg|dog
+|45|Food|Happy Dog NaturCroq|Happy dog naturcroq junior 15kg|55|HappyDogNaturcroq.jpg|dog
+|46|Food|Lily's Kitchen|Lily's Kitchen dog bedtime biscuits 100g |5|LilysKitchen.jpg|dog
+|47|Food|Happy Dog|Happy dog supreme Ireland 300g|10|HappyDogSupreme2.jpg|dog
+|48|Food|Happy Dog|Happy dog mini adult pour chien. Sac de 1kg.|15|HappyDogMiniAdult.jpg|dog
+|49|Food|Friskies|Friskies en sauce au thon, au saumon, au Cabillaud, à la sardine. 4x85g.|10|Friskies.jpg|cat
+|50|Food|Applaws|Applaws cat food pouches thon fillet  et pacific crevettes. 12x70g.|27|Applaws.jpg|cat
+|51|Food|Felix|Felix tenders effiles en gelee selection miste. 44x85g.|30|Felix.jpg|cat
+|52|Food|Sheba|Sheba mini fillets en sauce pour chat. Nourriture humide. 72x85g.|35|Sheba.jpg|cat
+|53|Food|Dreamies|Dreamies friandises pour chat poulet 350g|20|Dreamies.jpg|cat
+|54|Food|Science Selective|Science Selective hamster 350g|25|ScienceSelective.jpg|hamster
+|55|Food|Riga|Riga mix menu herbivore 1.5kg|50|Riga.jpg|hamster
+|56|Food|Tiny Friends|Tiny Friends hazel lovelies treat for hamster 120g|7|TinyFriends.jpg|hamster
+|57|Food|Little One |Little One aliment pour hamster 900g|35|LittleOne.jpg|hamster
+|58|Food|VitaKraft|VitaKraft friandises pour hamster 150g|10|VitaKraft.jpg|hamster
+|59|Food|Kaytee|Kaytee wild bird food 2.27kg|35|Kaytee.jpg|birds
+|60|Food|Pennington|Pennington wild bird seed classic 1kg|15|Pennington.jpg|birds
+|61|Food|Trill|Trill cocktail mix bird seed 10kg|25|Trill.jpg|birds
+|62|Food|Mazuri|Mazuri small birds diets 1kg|15|Mazuri.jpg|birds
+|63|Food|The Birds Company|The Birds Company foxtail millets bird food for all life stages 450g|15|TheBirdsCompany.jpg|birds
+|64|Accessories|Hotaden |Hotaden stainless steel bird feeder|15|Hotaden.jpg|birds
+|65|Accessories|Pawhut|Pawhut mangeoire en bois station à oiseaux|30|Pawhut.jpg|birds
+|66|Accessories|Cabane|Cabane oiseaux en bois, distribution de nourriture, décoration de jardin|25|Cabane.jpg|birds
+|67|Accessories|Cage|Cage à oiseaux XL, martelée, noire|45|Cage.jpg|birds
+|68|Accessories|Niche|Niche mobile pour chien taille S|40|Niche.jpg|dog
+== Table structure for table roles
+
+|------
+|Column|Type|Null|Default
+|------
+|//**RoleID**//|int|No|
+|RoleName|varchar(10)|No|
+== Dumping data for table roles
+
+|1|User
+|2|Admin
+== Table structure for table services
+
+|------
+|Column|Type|Null|Default
+|------
+|//**ServiceID**//|int|No|
+|**ServiceName**|varchar(20)|No|
+|ServiceDesc|text|No|
+|ServicePrice|double|No|
+== Dumping data for table services
+
+|1|Dog Walk|Walk your dog let him enjoy nature|20
+|2|Vet Visit|best vets for the best pets |30
+|3|Pet Spa|Special care cause they deserve the best|25
+|4|Pet Daycare|We will take care for your pet as if they are home|40
+|5|Pet Grooming|Your pet is cute but after a haircut they will look adorable |35
+== Table structure for table users
+
+|------
+|Column|Type|Null|Default
+|------
+|//**UserID**//|int|No|
+|FirstName|varchar(15)|No|
+|LastName|varchar(15)|No|
+|UserName|varchar(20)|No|
+|Email|varchar(50)|No|
+|Password|varchar(15)|No|
+|DOB|date|No|
+|Phone|int|No|
+|Gender|int|No|
+|RoleID|int|No|
+== Dumping data for table users
+
+|14|Aya|Mouawi|AyaMouawi|ayamouawi@gmail.com|ayamouawi|2003-07-12|71860410|0|1
+|15|Fouad|Dahouk|FouadDahouk|fouaddahouk@gmail.com|fouaddahouk|2003-06-18|61767171|0|1
+|16|admin|admin|admin|admin@gmail.com|admin|2023-08-08|71860410|0|2
+|17|Slieman|Yahfoufi|Slayy|Slieman@gmail.com|sleiman|2023-08-08|76675435|0|1
+|18|Nour|Dahouk|NourDahouk|NourDahouk@gmail.com|nourdahouk|2023-07-31|71543243|0|1
+===Database testing
+
+== Table structure for table test1
+
+|------
+|Column|Type|Null|Default
+|------
+|//**ID**//|int|No|
+|first name|varchar(15)|No|
+|last name|varchar(15)|No|
+|age|int|No|
+== Dumping data for table test1
+
